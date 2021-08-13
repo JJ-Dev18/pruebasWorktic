@@ -6,18 +6,17 @@
     $username =$_POST['username'];
     $password = md5($_POST['password']);
     $rol = $_POST['rol'];
-    echo $nombre,$username,$password,$rol;
     $db = new DB();
     $query = $db->connect()->prepare("INSERT INTO usuarios (nombre,username,password,rol_id) VALUES ('$nombre','$username','$password',$rol)");  
-    $query->execute();
-    if(!$query){
+    $resultado= $query->execute();
+    if($resultado != true){
       echo 'error al agregar usuario';
     }
     else {
-      $_SESSION['message'] = 'Usuario agregado';
+      $_SESSION['message_success'] = 'Usuario agregado';
       $_SESSION['message_type'] = 'success';
+      header('location: ../users/users.php');
 
-      echo $_SESSION['message'];
     }
     // $query->execute();  
     // echo  '<script language="javascript">
@@ -25,7 +24,7 @@
     //                     alert("agregado");
     //                 }
     //             </script>';
-    header('location: ../panels/admin.php');
+    
   }
 
 ?>

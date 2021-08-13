@@ -1,52 +1,78 @@
 <?php 
+ include('../db.php');
  session_start();
  if(!isset($_SESSION['rol'])){
-   header ('location : ./login.php');
+   header ('location: ../login.php');
+ 
  }
  else {
    if($_SESSION['rol'] != 1){
-     header('location : ./login.php');
+    header ('location: ../login.php');
+
    }
  }
+
+ $bd = new DB();
+ $db = new DB();
+ $query = $db->connect()->prepare("SELECT*from usuarios");  
+ $query->execute();
+ $row = $query->fetchAll(PDO::FETCH_OBJ);
  
-  
 ?>
-
+<!-- Panel de administrador  -->
 <?php include('../home.php')?> 
-<div class="container">
-    
-  <form action="../users/addUser.php" method="POST">
+<div class="col-sm-12 col-md-3 menu__nav">
+     <aside>
+       <a href="../users/users.php" class="col-sm-12 col-md-4 ">
+      <div >
+      <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="../img/users.jpg" class="card-img rounded-start" alt="imagen panel usuarios">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Usuarios</h5>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    </a>
+    <a href="../articles/stock.php" class="col-md-4 col-sm-12">
+   <div ">
+      <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="../img/stock.jpg" class="card-img rounded-start" alt="imagen inventario">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Inventario</h5>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
 
-    <div class="form-group" >
-        <?php if(isset($_SESSION['message'])) { ?>
-         <div class="alert alert-<?=$_SESSION['message_type']; ?> alert-dismissible fade show" role="alert">
-           <?=  $_SESSION['message']  ;  ?>
-       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-       <span aria-hidden="true">&times;</span>
-  </button>
+    </a> 
+     <a href="#" class="col-md-4 col-sm-12">
+   <div ">
+      <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="../img/ventas2.png" class="card-img rounded-start" alt="imagen inventario">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Ventas</h5>
+      </div>
+    </div>
+  </div>
 </div>
-    <?php } ?>
-      <label for="exampleInputEmail1">Nombre</label>
-      <input type="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="nombre"name="nombre">
     </div>
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" class="form-control" id="username" name='username' placeholder="username">
-    </div>
-    <div class="form-group">
-      <label for="paswword">Password</label>
-      <input type="password" name='password' class="form-control" id="password" placeholder="Password">
-    </div>
-    <div class="form-group">
-       <select class="form-control form-control-sm" name='rol'>
-    <option value="1">Administrador</option>
-    <option value="2">Vendedor</option>
-    <option value="3">contador</option>
-  </select>
-    </div>
-    <button type="submit" class="btn btn-primary" name='agregar'>Agregar</button>
-  
-  </form>
-  
-</div>
+
+    </a> 
+     </aside>
+   </div>
    

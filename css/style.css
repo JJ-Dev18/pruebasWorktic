@@ -1,0 +1,35 @@
+body{
+  
+}
+*{
+  box-sizing: border-box;
+}
+.navbar{
+  background-color: gray;
+}
+.cerrarsesion{
+  color: beige;
+}
+.cerrarsesion:hover{
+  color:#EDB45E; 
+  text-decoration: none;
+}
+a{
+  color:black;
+}
+a:hover{
+  text-decoration: none;
+  color:#EDB45E; 
+}
+
+.card-img{
+  width: 100px;
+  height: 100px;
+}
+.menu__nav{
+  width: 100vw;
+  height: 100vh;
+ 
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
