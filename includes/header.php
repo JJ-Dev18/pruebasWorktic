@@ -16,7 +16,7 @@
 <body>
 
 <nav class="navbar navbar-light ">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="../login.php" id='nombreU'>
     <img src="../img/logo.png" width="50" height="50" alt="logo">
     <?php echo $_SESSION['nombre']; ?>
   </a>

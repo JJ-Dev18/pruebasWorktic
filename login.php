@@ -86,7 +86,7 @@
       <img src="./img/logo.png" alt="logo" srcset="" width='200px'>
       
   <div class="form-group mt-2">
-    <label for="exampleInputEmail1">Username</label>
+    <label for="username">Username</label>
     <input type="text" name="username" class="form-control" id="username" " placeholder="Enter username">
   </div>
   <div class="form-group">
@@ -94,7 +94,7 @@
     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
   </div>
   
-  <button type="submit" class="btn btn-primary">Login</button>
+  <button type="submit" class="btn">Login</button>
 </form>
   </div>
 </body>

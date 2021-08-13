@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #EDB45E;
+  background-color: #fffff4;
 }
 *{
   box-sizing: border-box;
@@ -19,6 +22,7 @@ body {
   text-align: center;
 }
 .content__login form{
+  background-color: #EDB45E;
   display: flex;
   flex-direction: column;
   border: 1px solid gray ;
@@ -29,4 +33,8 @@ body {
 }
 .content__login form button{
   margin: auto;
+  background:#27A6E8 ;
+}
+.content__login form button:hover{
+    background-color:#F24929;  
 }

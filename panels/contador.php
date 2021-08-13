@@ -15,7 +15,7 @@
    
 <div class="col-sm-12 col-md-3 menu__nav">
      <aside>
-       <a href="../articles/stock.php" class="col-sm-12 col-md-4 ">
+       <a href="../contabilidad/contabilidad.php" class="col-sm-12 col-md-4 ">
       <div >
       <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">

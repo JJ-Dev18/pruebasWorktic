@@ -10,7 +10,6 @@
    }
  }
 
- $bd = new DB();
  $db = new DB();
  $query = $db->connect()->prepare("SELECT usuarios.nombre,usuarios.id,usuarios.username,usuarios.password,roles.nombre_rol FROM usuarios INNER JOIN roles on usuarios.rol_id=roles.id");  
  $query->execute();
@@ -22,7 +21,7 @@
 ?>
 
 <?php include('../home.php')?> 
-<div class="container">
+<div class="container mt-4">
 <h1><a href="../panels/admin.php"><i class="fas fa-long-arrow-alt-left"></i></a>    Usuarios </h1>
   <div class="row">
     
@@ -58,12 +57,12 @@
     </select>
       
       </div>
-      <button type="submit" class="btn btn-primary" name='agregar'>Add</button>
+      <button type="submit" class="btn btn_add" name='agregar'>Add</button>
     
     </form>
       </div>
     
-     <div class="col-md-8">
+     <div class="col-sm-12 col-md-8">
                               <table class="table" >
                                   <thead class="table-success table-striped" >
                                       <tr>

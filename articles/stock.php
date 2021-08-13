@@ -21,7 +21,7 @@
 ?>
 
 <?php include('../home.php')?> 
-<div class="container">
+<div class="container mt-4">
 <h1><a href="../panels/vendedor.php"><i class="fas fa-long-arrow-alt-left"></i></a> Articles </h1>
   <div class="row">
     

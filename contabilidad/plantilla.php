@@ -13,7 +13,7 @@ class PDF extends FPDF
         $this->SetFont("Arial", "B", 12);
         // Título
         $this->Cell(25);
-        $this->Cell(140, 5, utf8_decode("Reporte de alumnos árbol ñoño"), 0, 0, "C");
+        $this->Cell(140, 5, utf8_decode("Reporte panaderia Juana"), 0, 0, "C");
         //Fecha
         $this->SetFont("Arial", "", 10);
         $this->Cell(25, 5, "Fecha: ". date("d/m/Y"), 0, 1, "C");

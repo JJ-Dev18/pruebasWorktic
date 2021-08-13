@@ -1,25 +1,36 @@
-body{
-  
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fffff4;
+  overflow-x:  hidden;
 }
 *{
   box-sizing: border-box;
 }
 .navbar{
-  background-color: gray;
+  background-color: #27A6E8;
+  opacity: .8;
 }
 .cerrarsesion{
   color: beige;
 }
+#nombreU{
+  color: black;
+}
 .cerrarsesion:hover{
-  color:#EDB45E; 
+  color:#F24929; 
   text-decoration: none;
+}
+.btn_add{
+  color: white;
+  background:#F24929 ;
 }
 a{
   color:black;
 }
 a:hover{
   text-decoration: none;
-  color:#EDB45E; 
+  color:#F24929; 
 }
 
 .card-img{
@@ -33,3 +44,47 @@ a:hover{
   margin-right: auto;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+.content_form_report{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+#form_report{
+  margin: auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+#form_report h2{
+  font-size: 8px;
+  text-align: center;
+}
+#form_report h3{
+  color: #27A6E8;
+}
+#atras{
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  font-size: 60px;
+}
+#atras:hover{
+ transform: scale3d(10px);
+ color:#F24929; 
+}
+@media screen and (max-width:540px) {
+  .table td, .table th ,.table a{
+    
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    font-size: 10px;
+}
+}
+
+/* .table th::before{
+  content: 'Editar';
+} */
