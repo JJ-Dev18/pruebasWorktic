@@ -24,7 +24,7 @@
     //                     alert("agregado");
     //                 }
     //             </script>';
-    header('location: stock.php');
+    header('location: articles.php');
   }
 
 ?>

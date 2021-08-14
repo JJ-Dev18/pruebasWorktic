@@ -8,7 +8,7 @@
    $result = $query->execute();
    $_SESSION['message_success'] = 'Articulo Eliminado';
    $_SESSION['message_type'] = 'danger';
-   header('location: stock.php');
+   header('location: articles.php');
  
  }
 

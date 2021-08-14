@@ -62,7 +62,7 @@
     </form>
       </div>
     
-     <div class="col-sm-12 col-md-8">
+     <div class="col-sm-12 col-md-8 table-scroll">
                               <table class="table" >
                                   <thead class="table-success table-striped" >
                                       <tr>

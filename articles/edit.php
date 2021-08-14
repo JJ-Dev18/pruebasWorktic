@@ -17,7 +17,7 @@
       $_SESSION['message_success'] = 'Articulo modificado';
       $_SESSION['message_type'] = 'warning';
       
-      header('location: stock.php');
+      header('location: articles.php');
     }
     // $query->execute();  
     // echo  '<script language="javascript">
