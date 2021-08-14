@@ -1,17 +1,19 @@
 <?php
-
+   $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
   class DB{
+     
     private $host;
-    private $db;
-    private $user;
-    private $password;
-    private $charset;
+    private $user ;
+    private $password ;
+    private $db ;
+    private $active_group = 'default';
+    private $query_builder = TRUE;
 
     public function __construct(){
-        $this->host     = 'localhost';
-        $this->db       = 'papeleriadonajuana';
-        $this->user     = 'root';
-        $this->password = "";
+        $this->host     = $cleardb_url["host"];;
+        $this->db       = substr($cleardb_url["path"],1);
+        $this->user     = $cleardb_url["user"];
+        $this->password = $cleardb_url["pass"];
         $this->charset  = 'utf8mb4';
     }
 
