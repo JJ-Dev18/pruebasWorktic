@@ -5,11 +5,12 @@
     $id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $username =$_POST['username'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
+    $passFuerte = password_hash($password,PASSWORD_DEFAULT);
     $rol = $_POST['rol'];
     $db = new DB();
     $query = $db->connect()->prepare("UPDATE usuarios SET nombre = ?, username = ?, password = ? , rol_id = ? WHERE id = ?;");  
-    $resultado= $query->execute([$nombre,$username,$password,$rol,$id]);
+    $resultado= $query->execute([$nombre,$username,$passFuerte,$rol,$id]);
     if($resultado != true){
       echo 'error al editar usuario';
      

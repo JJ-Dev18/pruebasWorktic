@@ -4,10 +4,11 @@
   if(isset($_POST['agregar'])){
     $nombre = $_POST['nombre'];
     $username =$_POST['username'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
+    $passFuerte = password_hash($password,PASSWORD_DEFAULT);
     $rol = $_POST['rol'];
     $db = new DB();
-    $query = $db->connect()->prepare("INSERT INTO usuarios (nombre,username,password,rol_id) VALUES ('$nombre','$username','$password',$rol)");  
+    $query = $db->connect()->prepare("INSERT INTO usuarios (nombre,username,password,rol_id) VALUES ('$nombre','$username','$passFuerte',$rol)");  
     $resultado= $query->execute();
     if($resultado != true){
       echo 'error al agregar usuario';

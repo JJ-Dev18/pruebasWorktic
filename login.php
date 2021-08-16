@@ -26,13 +26,17 @@
   if(isset($_POST['username']) ){
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $db = new DB();
-    $query = $db->connect()->prepare('SELECT*FROM usuarios WHERE username = :username AND password = :password');  
   
-    $query->execute(['username' => $username, 'password' => $password]);
+    $db = new DB();
+    $query = $db->connect()->prepare('SELECT*FROM usuarios WHERE username = :username');  
+  
+    $query->execute(['username' => $username]);
     $row = $query->fetch(PDO::FETCH_NUM);
+    $hash = $row[3];
     
-    if($row == true){
+
+    if(($row == true)  && password_verify($password,$hash)  ){
+      
       $nombre = $row[1];
       $rol = $row[4];
       $_SESSION['rol'] = $rol;
@@ -88,11 +92,11 @@
       
   <div class="form-group mt-2">
     <label for="username">Username</label>
-    <input type="text" name="username" class="form-control" id="username" " placeholder="Enter username">
+    <input type="text" name="username" class="form-control" id="username" " placeholder="Enter username" required>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
   </div>
   
   <button type="submit" class="btn">Login</button>

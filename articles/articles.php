@@ -38,11 +38,11 @@
   </div>
       <?php unset($_SESSION['message_success'],$_SESSION['message_type']);} ?>
         <label for="nombre">Nombre</label>
-        <input type="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="nombre" name="nombre">
+        <input type="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="nombre" name="nombre" required>
       </div>
       <div class="form-group">
         <label for="precio">precio</label>
-        <input type="text" class="form-control" id="precio" name='precio' placeholder="precio">
+        <input type="text" class="form-control" id="precio" name='precio' placeholder="precio" required>
       </div>
       <div class="form-group">
         <label for="categoria">Categoria</label>

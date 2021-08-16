@@ -38,15 +38,15 @@
   </div>
       <?php unset($_SESSION['message_success'],$_SESSION['message_type']);} ?>
         <label for="exampleInputEmail1">Nombre</label>
-        <input type="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="nombre"name="nombre">
+        <input type="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="nombre"name="nombre" required>
       </div>
       <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name='username' placeholder="username">
+        <input type="text" class="form-control" id="username" name='username' placeholder="username" required>
       </div>
       <div class="form-group">
         <label for="paswword">Password</label>
-        <input type="password" name='password' class="form-control" id="password" placeholder="Password">
+        <input type="password" name='password' class="form-control" id="password" placeholder="Password" required>
       </div>
       <div class="form-group">
         <label for="rol">Rol</label>

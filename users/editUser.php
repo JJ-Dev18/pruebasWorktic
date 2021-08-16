@@ -42,7 +42,7 @@
       <div class="form-group">
         <label for="paswword">Password</label>
         <input type="password" name='password' 
-        value="<?php echo $persona->password  ?>" class="form-control" id="password" placeholder="Password">
+         class="form-control" id="password" placeholder="Password" required>
       </div>
       <div class="form-group">
         <label for="rol">Rol</label>
